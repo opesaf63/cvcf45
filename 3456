@@ -1,7 +1,21 @@
-{
-  "recommendations": [
-    "ms-vscode-remote.remote-containers",
-    "ms-vscode-remote.vscode-remote-extensionpack",
-    "esbenp.prettier-vscode"
-  ]
-}
+def get_parser(**parser_kwargs):
+    def str2bool(v):
+        if isinstance(v, bool):
+            return v
+        if v.lower() in ("yes", "true", "t", "y", "1"):
+            return True
+        elif v.lower() in ("no", "false", "f", "n", "0"):
+            return False
+        else:
+            raise argparse.ArgumentTypeError("Boolean value expected.")
+
+    parser = argparse.ArgumentParser(**parser_kwargs)
+    parser.add_argument(
+        "-n",
+        "--name",
+        type=str,
+        const=True,
+        default="",
+        nargs="?",
+        help="postfix for logdir",
+    )
