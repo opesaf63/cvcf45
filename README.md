@@ -1,1 +1,1 @@
-# cvcf45
+For large scale training we recommend using the datapipelines from our datapipelines project. The project is contained in the requirement and automatically included when following the steps from the Installation section. 
