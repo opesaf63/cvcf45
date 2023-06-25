@@ -1,2 +1,9 @@
 *.agdai
 MAlonzo/**
+.pt2
+.pt2_2
+.pt13
+*.egg-info
+build
+/outputs
+/checkpoints
